@@ -1,0 +1,408 @@
+/* ============ Global Styles ============ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* ============ Theme ============ */
+
+body.light-mode {
+    --bg-color: #f5f5f5;
+    --footer-color: #f6f6f6;
+    --text-color: #000000;
+    --text2-color: #F5F5F5;
+    --tag-text-color: #f5f5f5;
+    --tag-bg-color: #1d4ed8;
+    --tag-border-color: #1d4ed8;
+
+    --bg-content-color: #ffffff;
+    --bg-experience-color: #f6f6f6;
+
+    --button-readmore-color: #212124;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --footer-color: #171717;
+    --text-color: #F5F5F5;
+    --text2-color: #000000;
+    --tag-text-color: #f87171;
+    --tag-bg-color: #482b29;
+    --tag-border-color: #6c3938;
+
+    --bg-content-color: #212124;
+    --bg-experience-color: #161618;
+
+    --button-readmore-color: #ffffff;
+}
+
+.theme {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* ============ Profile ============ */
+.myprofile {
+    width: 100px;
+    height: 100px;
+    background-color: var(--bg-content-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.myprofile img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.myprofile:hover {
+    transform: scale(1.1);
+}
+
+/* ============ Social Icons ============ */
+.social-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ============ Container ============ */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+.home, .aboutme {
+    display: none;
+  }
+
+  .home.active {
+    display: block;
+  }
+
+  .aboutme.active {
+    display: block; 
+  }
+
+/* ============ Profile ============ */
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-info img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.profile-info h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    margin: 5px 0; 
+    text-align: center;
+}
+
+/* ============ Menu Bar ============ */
+.menu-bar { 
+    width: 220px;
+    height: 70px;
+    background-color: var(--bg-content-color); 
+    border-radius: 30px;
+    gap: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-bar:hover {
+    transform: scale(1.1);
+}
+
+.menu-button {
+    background-color: var(--bg-content-color); 
+    color:var(--text-color);
+    padding: 20px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px; 
+}
+
+.menu-button.selected {
+    background-color:var(--bg-experience-color); 
+}
+.menu-button:hover {
+    background-color:var(--bg-experience-color); 
+}
+
+/* ============ Company ============ */
+
+.company {
+    background-color: var(--bg-content-color);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+.company h1 {
+    font-size: 1.3em;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.company p {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+/* ============ Experience ============ */
+
+.experience {
+    background-color: var(--bg-experience-color);
+    margin-top: 20px;
+    display: flex;
+    align-items: top;
+    padding: 20px;
+    border-radius: 40px;
+    flex-wrap: wrap;
+}
+.experience:hover {
+    transform: scale(1.015);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience img {
+    width: 10%;
+    height: 10%;
+    margin-right: 3%; 
+    border-radius: 10px;
+}
+
+.experience-info {
+    flex: 1;
+}
+
+.experience-info h3 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.experience-info p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.experience-info .tags {
+    margin-top: 10px;
+    color: var(--tag-text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.experience-info .tags span {
+    background-color: var(--tag-bg-color);
+    border: 1px solid var(--tag-border-color);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+
+/* ============ Experience style1 ============ */
+.experience-style1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+
+    background-color: var(--bg-experience-color);
+    margin-top: 20px;
+    gap: 20px;
+    border-radius: 30px;
+}
+.experience-style1:hover {
+    transform: scale(1.015);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-style1-info {
+    flex: 1;
+    max-width: 50%;
+    padding: 7%;
+}
+
+.experience-style1-logo {
+    flex: 1;
+    width: 10%;
+    height: 10%;
+}
+
+.experience-style1-logo img {
+    border-radius: 10px;
+}
+
+
+.experience-style1-image {
+    flex: 1;
+    max-width: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.experience-style1-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .experience-style1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-style1-info {
+        max-width: 100%;
+    }
+
+    .experience-style1-image {
+        max-width: 100%;
+        justify-content: center;
+    }
+}
+  
+
+.experience-style1-info h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.experience-style1-info p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.experience-style1-info .tags {
+    margin-top: 10px;
+    color: var(--tag-text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.experience-style1-info .tags span {
+    background-color: var(--tag-bg-color);
+    border: 1px solid var(--tag-border-color);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* ============ Read more ============ */
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--button-readmore-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text2-color);
+}
+
+.read-more:hover {
+    background-color: #e0e0e0;
+}
+/* ============ Footer ============ */
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* ============ Images ============ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
