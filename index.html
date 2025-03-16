@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <header>
     <div class="social-container">
         <div class="myprofile">
             <img id="profileImage" src="images/img-profile.png" alt="Profile Picture">
@@ -32,9 +32,11 @@
             </a>
         </div>
     </div>
+    </header>
 
+    <main>
     <div class="container">
-        <header>
+       
             <div class="profile-info">
                 <div>
                     <h1>Hi, I'm Sadanan</h1>
@@ -46,7 +48,7 @@
                         projects.</p>
                 </div>
             </div>
-        </header>
+      
 
         <div class="menu-bar"> 
             <button class="menu-button selected" id="home-btn">Home</button>
@@ -55,7 +57,7 @@
 
         <div class="home active" id="homeContent">
         <section class="experiences">
-            <div class="company">
+            <div class="content">
                 <h1>Unity 3d Developer @CyberIce Studio 2024-2025</h1>
 
                 <div class="experience-style1">
@@ -75,7 +77,12 @@
                             <span>UX</span>
                             <span>WebGL</span>
                         </div>
-                        <button class="read-more">Read More →</button>
+                        <a href="adhub.html">
+                        <button class="read-more" id="adhub">
+                            Read More
+                            <img class="read-more-img" id="arrow-right" src="images/img-arrow-right-black.png" alt="arrow">
+                        </button>
+                        </a>
                     </div>
                     <div class="experience-style1-image">
                         <img src="images/img-adhub.png" alt="ad-adhub">
@@ -131,7 +138,7 @@
 
             </div>
 
-            <div class="company">
+            <div class="content">
                 <h1>Game Developer @PIGSSS GAMES Co.,Ltd. 2022-2024</h1>
 
                 <div class="experience-style1">
@@ -198,7 +205,7 @@
             </div>
 
 
-            <div class="company">
+            <div class="content">
                 <h1>Game Developer @Magic Box Asia. Co.,Ltd. 2017</h1>
 
                 <div class="experience">
@@ -218,22 +225,78 @@
         </section>
         </div>
 
+
         <div class="aboutme" id="aboutMeContent">
-            <section class="experiences">
-                <div class="company">
-    
-                    <div class="experience-style1">
-    
-                        
-            <h1>About Me</h1>
-            <p>This is the About Me section with its specific content.</p>
-                        
+
+            <div class="content">
+                <div class="content-photo">
+                <img src="images/img-gallery-0.jpg" alt="gallery-0">
+                </div>
+               
+                <div class="content-me">
+                <p> I'm a game developer based in Bangkok, super into software and personal growth. Right now, I'm looking for cool
+                    opportunities to team up and create some awesome projects.</p>
+                <br>
+                <p> Before this, I worked at Cyberice Studio, where I designed fun experiences and user-friendly interfaces for games,
+                    making sure users were excited about the tech I built.
+                    I started off in architecture, which helped me sharpen my design skills and dive deep into Unity.</p>
+                <br>
+                <p> As a developer, I really enjoy becoming an expert in game systems and collaborating with others.
+                    I appreciate beautiful designs backed by clever thinking. To me, digital products are like living things that can
+                    adapt and grow over time.</p>
+                <br>
+                <p> When I’m not tinkering with game development, I love hanging out with my family and pets.
+                    I'm all about buffets and trying to stay healthy with regular exercise.
+                    I’ve got four cats named Sever, Luna, Casper, and Merlin who always keep things lively!</p>
+                </div> 
+           </div>
+
+            
+            <div class="content">
+                <div class="gallery-info">
+                <h1>Images Gallery</h1>
+                <p>I capture my memories through photography during joyful times, creating lasting reminders of life’s beautiful moments.</p>
+                </div>
+                <div class="gallery">
+                    <img src="images/img-gallery-1.png" alt="gallery-1" onclick="openModal(this)">
+                    <img src="images/img-gallery-2.png" alt="gallery-2" onclick="openModal(this)">
+                    <img src="images/img-gallery-3.png" alt="gallery-3" onclick="openModal(this)">
+                    <img src="images/img-gallery-4.png" alt="gallery-4" onclick="openModal(this)"> 
+                    <img src="images/img-gallery-5.jpg" alt="gallery-5" onclick="openModal(this)">
+                </div> 
+            </div>
+
+            <div class="content">
+
+                <div class="experience">
+                    <img src="images/img-school-2.jpg" alt="suit">
+                    <div class="experience-info">
+                        <h3>Silpakorn University (Phetchaburi)</h3>
+                        <h3>2014 - 2019</h3>
+                        <p>Faculty of Information Communication and Technology</p>
+                        <p>- Majoring Game Design</p>
                     </div>
                 </div>
-            </section>
-          </div>
+                <div class="experience">
+                    <img src="images/img-school-1.jpg" alt="suit">
+                    <div class="experience-info">
+                        <h3>Saard Phaderm Wittaya School (Chumphon)</h3>
+                        <h3>2010 - 2013</h3>
+                        <p>High School</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="imgModal">
+        </div>
 
     </div>
+    </main>
 
     <footer>
         <p>©2025 by Sadanan</p>
