@@ -2,8 +2,9 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const linkedinIcon = document.getElementById('linkedin-icon');
 const emailIcon = document.getElementById('email-icon');
-const arrowRightIcon = document.getElementById('arrow-right');
-const arrowLeftIcon = document.getElementById('arrow-left');
+
+const arrowRightIcons = document.querySelectorAll('.read-more-img');
+const arrowLeftIcons = document.getElementById('arrow-left');
 
 const homeContent = document.getElementById("homeContent");
 const aboutMeContent = document.getElementById("aboutMeContent");
@@ -22,14 +23,21 @@ function updateIcon() {
     if(themeIcon) themeIcon.src = 'images/img-icon-sun.png';
     if(linkedinIcon) linkedinIcon.src = "images/img-icon-linkedin-white.png"
     if(emailIcon) emailIcon.src = "images/img-icon-email-white.png"
-    if(arrowRightIcon) arrowRightIcon.src = "images/img-arrow-right-black.png"
-    if(arrowLeftIcon) arrowLeftIcon.src = "images/img-arrow-left-white.png"
+
+    if(arrowLeftIcons) arrowLeftIcons.src = "images/img-arrow-left-white.png"
+    arrowRightIcons.forEach(icon => {
+      icon.src = "images/img-arrow-right-black.png";
+    });
+
   } else {
     if(themeIcon) themeIcon.src = 'images/img-icon-moon.png';
     if(linkedinIcon) linkedinIcon.src = "images/img-icon-linkedin-black.png"
     if(emailIcon) emailIcon.src = "images/img-icon-email-black.png"
-    if(arrowRightIcon) arrowRightIcon.src = "images/img-arrow-right-white.png"
-    if(arrowLeftIcon) arrowLeftIcon.src = "images/img-arrow-left-black.png"
+
+    if(arrowLeftIcons) arrowLeftIcons.src = "images/img-arrow-left-black.png"
+    arrowRightIcons.forEach(icon => {
+      icon.src = "images/img-arrow-right-white.png";
+    });
   }
 }
 
