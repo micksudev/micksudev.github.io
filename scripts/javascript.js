@@ -94,15 +94,18 @@ aboutMeBtn.addEventListener("click", () => {
 
 // Profile
 const profileImage = document.getElementById("profileImage");
+const myProfile = document.querySelector('.myprofile');
 
-document.querySelector('.myprofile').addEventListener('mouseover', function() {
-  if(profileImage) profileImage.src = 'images/img-profile2.png';
-}); 
-
-document.querySelector('.myprofile').addEventListener('mouseout', function() {
-  if(profileImage) profileImage.src = 'images/img-profile.png';
-});
-
+if(myProfile)
+{
+  myProfile.addEventListener('mouseover', function() {
+    if(profileImage) profileImage.src = 'images/img-profile2.png';
+  }); 
+  
+  myProfile.addEventListener('mouseout', function() {
+    if(profileImage) profileImage.src = 'images/img-profile.png';
+  });
+}
 
 // Gallery
 function openModal(imgElement) {
