@@ -380,6 +380,22 @@ body.dark-mode {
     border-radius: 10px;
 }
 
+.experience-style2-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.experience-style2-image img {
+    max-width: 70%; 
+    object-fit: contain;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     .experience-style1 {
         flex-direction: column;
